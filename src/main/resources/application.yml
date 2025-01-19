@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: email-system
+  data:
+    mongodb:
+      uri: ${URI}
+      database: Enquiry
+  mail:
+    host: smtp.sendgrid.net
+    port: 587
+    username: apikey
+    password: ${EMAIL_PASSWORD}
+  properties:
+    mail:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+  email:
+    from-email: ${FROM}
+    to-email: ${TO}
+
